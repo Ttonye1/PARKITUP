@@ -1,6 +1,120 @@
 *{
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+    background-color: #dee1e2;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(221, 217, 211);
+    padding: 20px 40px;
+}
+
+.logo{
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    font-size: 40px;
+    text-decoration: none;
+    color: rgb(65, 65, 190);
+}
+
+.group{
+    display: flex;
+    align-items: center;
+}
+
+.group ul{
+    position: relative;
+    display: flex;
+    gap: 30px;
+}
+
+.group ul li{
+    list-style: none;
+}
+
+.group ul li a{
+    text-decoration: none;
+    position: relative;
+    font-size: 1em;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.search{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.5em;
+}
+
+.searchbox{
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: white;
+    align-items: center;
+    padding: 0 30px;
+    transition: 0.5s ease-in-out;
+}
+
+.searchbox.active{
+    left: 0;
+}
+
+.searchBtn{
+    position: relative;
+    left: 30px;
+    top: 1.5px;
+    transition: 0.5 ease-in-out;
+}
+
+.closeBtn{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.searchBtn.active{
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    scale: 0;
+    transition: 0.5s;
+}
+
+.closeBtn.active{
+    opacity: 1;
+    visibility:visible;
+    transition: 0.5s;
+    scale: 1;
+}
+
+.searchbox input{
+    border: none;
+    outline: none;
+    width: 100%    ;
+    height: 50px;
+    color: black;
+    border-bottom: 1px solid black;
+    font-size: 1.25em;
 }
 
 
